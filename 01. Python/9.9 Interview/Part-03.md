@@ -16,6 +16,25 @@ Classes are created using the **`class` keyword** followed by the class name and
 
 #### **25. Write a program in Python to execute the bubble sort algorithm.**
 **Bubble sort** is a simple algorithm that repeatedly steps through a list, **compares adjacent elements**, and **swaps them** if they are in the wrong order. This process is repeated until the entire list is sorted. It uses **nested loops** to traverse the list; if a pair is out of order (the first is greater than the second), they are swapped.
+```python
+def bubble_sort(arr):
+    """
+    Sorts a list in ascending order using Bubble Sort.
+    Time Complexity: O(n^2) in worst case.
+    """
+    n = len(arr)
+    for i in range(n):
+        swapped = False  # Optimization: track if any swap happened
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                # Swap elements
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        # If no swaps occurred, the list is already sorted
+        if not swapped:
+            break
+    return arr
+```
 
 #### **26. Write a code snippet to generate the square of every element in a list.**
 The most concise way to achieve this is through **list comprehension**. This method creates a new list by taking each number from an existing list, **squaring it**, and collecting the results into the new list (e.g., `[x**2 for x in numbers]`).
