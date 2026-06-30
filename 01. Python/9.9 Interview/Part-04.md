@@ -14,9 +14,38 @@ For pure Python code, there is no separate compilation step for the developer; t
 
 #### **35. How to add a new column to a Pandas DataFrame?**
 You can add a new column by assigning a **new Pandas series** to the DataFrame using a new column name as a key (e.g., `df['new_column'] = series`). Another method involves performing operations on **existing columns**, such as summing two columns to create a third, which dynamically expands the data frame.
+```python
+import pandas as pd 
+data_info = {'first': pd Series([1, 2, 3), index=["a" 0", 'c)),
+
+‘second’: pd.Series([l, 2, 3, 4), index=('a", '", '", 'd1)} 
+df = pd.DataFrame(data_info) 
+#To add new column third 
+df 'third'}=pd.Series((10,20,30),index=["a"'b",'¢']) 
+print (df) 
+#To add new column fourth 
+dff fourth']=df{ first']+info[ 'third'] 
+print (df) 
+```
 
 #### **36. Write code to sort an array in NumPy by the (n-1)th column.**
 To sort by the (n-1)th column, you use the **`numpy.argsort()`** function. First, you select the specified column and use `argsort()` to obtain the **indices** that would sort that specific column. Then, you use those indices to **rearrange the rows** of the original array to produce the sorted version.
+```python
+import numpy as np 
+# Sample array 
+arr = np.array([[4, 8, 2], 
+[3.1.7 
+[5.6 9]) 
+# Get the indices that would sort the array by the (N-1)th column 
+sorted _indices = np.argsort(arr[:, -1])
+
+# Use the sorted indices to sort the array
+sorted arr = arr{sorted_indices] 
+print("Driginal Array:") 
+print(arr) 
+print("\nSorted Array by the (N-1)th column:") 
+print(sorted_arr) 
+```
 
 #### **37. How do you compute the Euclidean distance between two series?**
 To compute this distance, you can use the **`scipy.spatial.distance.euclidean`** function. In the code, you define the two series as **NumPy arrays** and then pass them as arguments into the `euclidean` function, which returns the calculated distance between the two.
