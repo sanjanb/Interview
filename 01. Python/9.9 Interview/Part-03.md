@@ -38,9 +38,32 @@ def bubble_sort(arr):
 
 #### **26. Write a code snippet to generate the square of every element in a list.**
 The most concise way to achieve this is through **list comprehension**. This method creates a new list by taking each number from an existing list, **squaring it**, and collecting the results into the new list (e.g., `[x**2 for x in numbers]`).
+```python
+# Given list 
+numbers =[1, 2, 3, 4, 5] 
+# Using list comprehension to square each element 
+squared_numbers = [number ** 2 for number in numbers] 
+print(squared_numbers) |
+```
 
 #### **27. Write a program to produce the Fibonacci series in Python.**
 The **Fibonacci series** is a sequence where each number is the **sum of the two preceding ones**, typically starting with **0 and 1**. A program generates this by starting with those first two terms and, in each iteration, calculating the next number by **adding the last two numbers** in the series and appending it to the list.
+```python
+def generate_fibonacci(n): 
+    # Initialize the first two Fibonacci numbers 
+    fib_series = [0, 1] 
+
+    # Generate Fibonacci sequence 
+    for i in range(2, n): 
+    next_fib = fib_series[-1] + fib_series[-2] 
+    fib_series.append(next_fib) 
+    return fib_series 
+    
+    # Example usage 
+num_terms = int(input(“Enter the number of terms for the Fibonacci series: ")) 
+fibonacci_series = generate_fibonacci(num_terms) 
+print("Fibonacci series up to", num_terms, "terms:”, fibonacci_series) 
+```
 
 #### **28. What is the difference between a shallow copy and a deep copy?**
 A **shallow copy** creates a new object but **copies only the references** to nested objects; therefore, the original and the copy **share the same nested objects**. A **deep copy** creates a new object and **recursively copies all objects** it contains. In a deep copy, the original and the copy **do not share any nested objects**, so changes in one do not affect the other.
