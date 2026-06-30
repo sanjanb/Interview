@@ -49,9 +49,36 @@ print(sorted_arr)
 
 #### **37. How do you compute the Euclidean distance between two series?**
 To compute this distance, you can use the **`scipy.spatial.distance.euclidean`** function. In the code, you define the two series as **NumPy arrays** and then pass them as arguments into the `euclidean` function, which returns the calculated distance between the two.
+```python
+
+import numpy as np 
+from scipy.spatial distance import euclidean 
+# Sample series 
+series1 = nparray([l, 2, 3, 4, 51) 
+series2 = np.array([B, 7, 8, 9, 10]) 
+# Compute the Euclidean distance between the two series 
+distance = euclidean(seriesl, series2) 
+print("Euclidean distance between the two series:", distance) 
+```
 
 #### **38. How do you get the items not common to both series A and series B?**
 This is achieved using the **`pandas.Series.isin()`** method combined with **Boolean indexing**. You first find elements in series A that are not in B, and elements in B that are not in A. Finally, you **concatenate these unique elements** into a single series to see all items that are not common to both.
+```python
+import pandas as pd 
+# Sample Series 
+a=pd.Series([1,2.3,4,5])
+b= pd.Series([4,5,6,7.8])
+# Items inanotion
+not_in_b = a[~a.isin(b)] 
+# Items in b not ina |
+not_in_a = b[~h.isin(a)]
+
+4 Concatenate the unigue elements 
+from both series 
+unique_items = pd.concat([not_in_b,not_in_a]).reset_index(drop=True)
+print("ltems not common to bothseries:") 
+print(unique_jtems)
+```
 
 #### **39. What is Flask and explain its benefits?**
 **Flask** is a **micro-web framework** written in Python, designed to be lightweight and easy to set up for simple applications while remaining extensible for complex ones. Its benefits include **simplicity** for beginners, **flexibility** in choosing components, a **lightweight** nature without unnecessary overhead, and a **robust ecosystem** with many available extensions for tasks like authentication and database integration.
