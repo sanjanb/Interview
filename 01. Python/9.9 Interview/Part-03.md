@@ -67,9 +67,60 @@ print("Fibonacci series up to", num_terms, "terms:”, fibonacci_series)
 
 #### **28. What is the difference between a shallow copy and a deep copy?**
 A **shallow copy** creates a new object but **copies only the references** to nested objects; therefore, the original and the copy **share the same nested objects**. A **deep copy** creates a new object and **recursively copies all objects** it contains. In a deep copy, the original and the copy **do not share any nested objects**, so changes in one do not affect the other.
+```python
+# Shallow copy
+impart copy 
+original_list = [[1, 2, 3], [4. 5, B]] 
+shallow_copied_list = copy.copy(original_list)
+shallow_copied_list[0][0] = 'X'
+print(original_list) # Output: [['X', 2, 3], [4. 5, 61]
+
+# deep copy
+import copy 
+origina list = [[1, 2, 3], [4. 5, B]] 
+deep_copied list = copy.deepcopy(original list)
+deep_capied_list{0][0] =X 
+print(original_list) # Output: [[1, 2, 3], [4, 5. 61]
+```
 
 #### **29. Write a program in Python to check if a sequence is a palindrome.**
 A **palindrome** is a sequence that reads the **same backward as forward** (like "radar" or "level"). To check this in Python, you can write a function that **compares the original sequence to its reverse**. If they match exactly, the sequence is a palindrome.
+```python
+def is_palindrome(sequence): 
+
+# Reverse the sequence and compare it to the original 
+    return sequence == sequence[:-1] 
+# Examples of using the function: 
+# Check a string 
+print(is_palindrome("radar”)) # Output: True 
+# Check alist 
+print(is_palindrome((1, 2, 3, 2. 11)) # Output: True 
+# Check a number (by converting it to a string first) 
+print(is_palindrome(str(12321))) # Output: True 
+# A non-palindrome example 
+print(is_palindrome("python")) # Output: False 
+```
 
 #### **30. How is multi-threading achieved in Python?**
 Multi-threading is achieved using the **`threading` module**, which allows different parts of a program to **run concurrently** as smaller units of execution called **threads**. You can create a subclass of `threading.Thread`, override its **`run` method** with the desired task, and use the **`start()`** and **`join()`** methods to manage the execution.
+```python
+import threading 
+import time 
+class MyThread(threading. Thread): 
+    def run(self): 
+        for _ in range(5): 
+print(threading.current_thread().getName(), "is  running") 
+        time.sleep(1) 
+
+# Create two threads 
+thread! = MyThread(name="Thread I") 
+thread2 = MyThread(name="Thread 2")
+
+# Start the threads 
+threadl.start() 
+thread2.start() 
+# Wait for threads to complete 
+thread! join() 
+threadZ.join() 
+print("Main thread exiting")
+```
