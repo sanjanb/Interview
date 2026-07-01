@@ -1,3 +1,34 @@
+### **SQL Interview Questions: Part 1 (1–5)**
+
+#### **1. What is the difference between DBMS and RDBMS?**
+**DBMS (Database Management System)** is a basic way to store data in **individual files** where there is no connection between them, making searching through data tedious and time-consuming. In contrast, **RDBMS (Relational Database Management System)** stores data in **interconnected tables**. This relational structure allows for **faster data retrieval**, reduces data redundancy, and supports multiple users with high security.
+
+#### **2. What is a primary key and a foreign key?**
+A **primary key** serves as a **unique identifier** for every row in a table, ensuring that each record is distinct and cannot be duplicated. It also **does not allow null or empty values**. A **foreign key** is used to **create a link between two tables** by pointing back to the primary key of another table, allowing records in one table to reference related information in another.
+
+#### **3. What are constraints and their types?**
+**Constraints** are rules applied to data in a table to ensure it remains **accurate and reliable**. The common types of constraints in SQL include:
+*   **Not Null**: Ensures a column **cannot be empty**.
+*   **Unique**: Guarantees that all values in a column are **distinct**.
+*   **Primary Key**: A combination of Not Null and Unique that **uniquely identifies** each record.
+*   **Foreign Key**: **Links tables together** by referencing a primary key in another table.
+*   **Check**: Enforces a specific **condition** (e.g., ensuring a "voting age" column only accepts values over 18).
+*   **Default**: Provides a **predefined value** if no value is specified for a column.
+
+#### **4. Explain DDL and DML commands in SQL.**
+**DDL (Data Definition Language)** commands, such as **CREATE, ALTER, and DROP**, are used to define and organize the **structure of the database** (the "house") without dealing with the actual data itself. **DML (Data Manipulation Language)** commands, such as **INSERT, UPDATE, and DELETE**, are used to manage and manipulate the **actual data** (the "items inside the house") once the tables have been created.
+
+#### **5. What is the difference between Delete, Drop, and Truncate statements?**
+These three statements are used to remove data in different ways:
+*   **Delete**: Removes **specific rows** based on a condition; it is precise and allows you to **roll back (undo)** the operation.
+*   **Truncate**: Quickly **empties the entire table** but keeps the table structure intact for future use; it **cannot be rolled back**.
+*   **Drop**: Completely **removes the entire table structure** and all its data from the database permanently.
+
+***
+
+---
+
+
 ## 1. What is the difference between DBMS and RDBMS?
 
 * **DBMS** stores data in isolated files.
