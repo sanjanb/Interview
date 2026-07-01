@@ -1,4 +1,4 @@
-Database & SQL Basics (CRUD Operations)
+## Database & SQL Basics (CRUD Operations)
 
 * 
 **Create (INSERT):** Adding a new AI voice bot call record into the database.
