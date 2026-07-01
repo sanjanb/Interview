@@ -1,3 +1,33 @@
+### **SQL Interview Questions: Part 2 (6–10)**
+
+#### **6. Differentiate between Group By and Order By Clause.**
+These two clauses serve different purposes for organizing data. **Group By** is like putting your data into **meaningful buckets or summaries**. It is typically used with **aggregate functions** (like SUM, AVG, or COUNT) to calculate things such as the total or average salary within a specific department. **Order By**, on the other hand, is used for **sorting rows** in a particular order. It allows you to arrange your entire table based on one or more columns, such as ranking employees by salary from highest to lowest or alphabetizing names.
+
+#### **7. Explain the difference between Where and Having Clause.**
+The primary difference lies in **when the filtering occurs**. The **Where Clause** acts like a watchman at a gate; it **filters individual rows** based on a specific condition **before** any grouping takes place. For example, you might use it to find only students who are 18 years or older. The **Having Clause** acts like a judge in a talent show; it **filters groups** that were created by the Group By clause **after** the data has been aggregated. You would use it if you wanted to display only those age groups that have more than one student.
+
+#### **8. What are aggregate functions in SQL and can you provide examples?**
+**Aggregate functions** are tools that allow you to perform calculations on a set of values to return a single summarized result. Common examples include:
+*   **Count**: Returns the total number of rows or non-null values in a column.
+*   **Sum**: Adds up all the values in a numeric column.
+*   **Average (AVG)**: Calculates the average value of a numeric column.
+*   **Min**: Finds the lowest value in a column.
+*   **Max**: Finds the highest value in a column.
+
+#### **9. Explain indexing in SQL and what do you mean by clustered index?**
+**Indexing** is a way to make data retrieval fast and efficient, similar to using an index at the back of a book to find a topic without flipping through every page. Without an index, a database must search through every record one by one, which is very slow. A **clustered index** specifically organizes the **actual data rows** in the table in a specific order, such as arranging employee IDs from smallest to largest. This allows the database to jump directly to a specific section of data, significantly cutting down search time.
+
+#### **10. What is normalization and explain the different normal forms?**
+**Normalization** is the process of organizing data efficiently to **minimize redundancy** (duplicate information) and prevent errors when adding, removing, or updating records. The different normal forms include:
+*   **1NF (First Normal Form)**: Each table cell must contain a **single value**, and each column must have a unique name.
+*   **2NF (Second Normal Form)**: All non-key attributes must **depend directly on the primary key** rather than on other attributes.
+*   **3NF (Third Normal Form)**: Every non-key attribute must be **independent** of other non-key attributes.
+*   **BCNF (Boyce-Codd Normal Form)**: A more advanced version where every determinant in the table must be a **candidate key**.
+
+***
+
+---
+
 ## 6. Differentiate between Group By and Order By Clause.
 
 * **Group By** groups rows with identical data into summary rows (buckets).
