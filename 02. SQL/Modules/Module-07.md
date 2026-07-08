@@ -22,7 +22,7 @@ The `LEFT JOIN` returns **all records from the left table**, along with any matc
 
 The `RIGHT JOIN` is the exact mirror image of the Left Join. It preserves **every single row from the right table**, pulling in matches from the left table where they exist. If a row in the right table has no matching counterpart on the left, the left-side columns are returned as `NULL`.
 
-### 4. FULL (OUTER) JOIN
+## 4. FULL (OUTER) JOIN
 
 A `FULL OUTER JOIN` combines the behavior of both Left and Right joins. It returns rows when there is a match in **either** the left or the right table. If there is a mismatch on either side, it keeps the unmatched row and overlays the missing side's attributes with `NULL`.
 
