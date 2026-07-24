@@ -1,5 +1,3 @@
-Here is a deeply enhanced version of the original questions. Every answer has been expanded with practical code blocks, architectural blueprints, and direct production insights to ensure you can speak with absolute authority during your technical loops.
-------------------------------
 ## 👨‍💻 Deep Dive: Freshers (Basic Level)## Q1. What is Data Engineering?
 Data engineering is the foundational practice of designing, building, and maintaining systems, architectures, and pipelines that automate the collection, storage, scale-out compute, and delivery of raw data.
 
